@@ -118,7 +118,7 @@
   },   
   {
     "nama": "PJU Proposed 1",
-    "lon": 112.670916,
+    "lon": 112.6710534,
     "lat": -7.299901,
     "status": "proposed",
     "model": "Phillips BRP110 LED120/730",
@@ -135,8 +135,8 @@
 
   {
     "nama": "PJU Proposed 3",
-    "lon": 112.670752,
-    "lat": -7.299955,
+    "lon": 112.670681,
+    "lat": -7.300203,
     "status": "proposed",
     "model": "Phillips BRP110 LED120/730",
     "file": "gambar/lokasi 3.jpg"
@@ -144,8 +144,8 @@
 
   {
     "nama": "PJU Proposed 4",
-    "lon": 112.670724,
-    "lat": -7.299997,
+    "lon":  112.670605,
+    "lat": -7.300402,
     "status": "proposed",
     "model": "Phillips BRP110 LED120/730",
     "file": "gambar/lokasi 4.jpg"
@@ -169,8 +169,8 @@
   },
   {
     "nama": "PJU Proposed 7",
-    "lon": 112.670117,
-    "lat": -7.300619,
+    "lon": 112.670233,
+    "lat": -7.300535,
     "status": "proposed",
     "model": "Phillips BRP110 LED120/730",
     "file": "gambar/lokasi 7.jpg"
