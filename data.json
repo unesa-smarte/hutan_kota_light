@@ -1,0 +1,37 @@
+[
+	{"nama" : "PJU_Existing_1", 
+	 "lon" : 112.671364,
+	 "lat" : -7.30076,
+	 "status" : "existing",
+	 "model" : "IC-AIOM80",
+	 "file": "\gambar\pju1.jpg"
+	 },
+	{"nama" : "PJU_Existing_2", 
+	 "lon" : 112.671340,
+	 "lat" : -7.300322, 
+	 "status" : "existing",
+	 "model" : "IC-AIOM80",
+	 "file": "\gambar\pju2.jpg"
+	 },
+	{"nama" : "PJU_Existing_3", 
+	 "lon" : 112.671069,
+	 "lat" : -7.300062, 
+	 "status" : "existing",
+	 "model" : "IC-AIOM80",
+	 "file": "\gambar\pju3.jpg"
+	 },
+	{"nama" : "PJU_Proposed_1", 
+	 "lon" : 112.670648,
+	 "lat" : -7.300376, 
+	 "status" : "proposed",
+	 "model" : "Phillips BRP110 LED120/730",
+	 "file": "\gambar\prp1.jpg"
+	 },
+	{"nama" : "PJU_Proposed_2", 
+	 "lon" : 112.670752,
+	 "lat" : -7.300083, 
+	 "status" : "proposed",
+	 "model" : "Phillips BRP110 LED120/730",
+	 "file": "\gambar\prp2.jpg"
+	 }	
+]	
