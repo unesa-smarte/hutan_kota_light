@@ -24,7 +24,7 @@
     "status": "existing",
     "model": "IC-AIOM80",
     "kondisi": "mati",
-    "file": "gambar/Lampu 3 (Shadow) .jpg"
+    "file": "gambar/Lampu 3 shadow.jpg"
   },
   {
     "nama": "PJU Existing 4",
@@ -33,7 +33,7 @@
     "status": "existing",
     "model": "IC-AIOM80",
     "kondisi": "mati",
-    "file": "gambar/Lampu 4 (Shadow) .jpg"
+    "file": "gambar/Lampu 4 shadow.jpg"
   },  
   {
     "nama": "PJU Existing 5",
@@ -42,7 +42,7 @@
     "status": "existing",
     "model": "IC-AIOM80",
     "kondisi": "mati",
-    "file": "gambar/Lampu 5 (Shadow) .jpg"
+    "file": "gambar/Lampu 5 shadow.jpg"
   },
   {
     "nama": "PJU Existing 6",
