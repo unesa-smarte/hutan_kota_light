@@ -1,12 +1,12 @@
 [
   {
     "nama": "PJU_Existing_1",
-    "lon": 112.671364,
-    "lat": -7.30076,
+    "lon": 112.671906,
+    "lat": -7.301268,
     "status": "existing",
     "model": "IC-AIOM80",
     "kondisi": "normal",
-    "file": "gambar/IMG20260722102908.jpg"
+    "file": "gambar/Lampu 1.jpg"
   },
   {
     "nama": "PJU_Existing_2",
