@@ -109,7 +109,7 @@
         }).addTo(map);
 
         // 3. Menambahkan Kotak Judul & Legenda (Disiapkan dengan ID Elemen untuk Count)
-        const legend = L.control({ position: 'bottomleft' });
+        const legend = L.control({ position: 'topright' });
 
         legend.onAdd = function (map) {
             const div = L.DomUtil.create('div', 'map-legend');
