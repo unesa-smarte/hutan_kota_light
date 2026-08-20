@@ -54,7 +54,7 @@
     "file": "gambar/Lampu 6.jpg"
   },
   {
-    "nama": "PJU Existing 8",
+    "nama": "PJU Existing 7",
     "lon": 112.671305,
     "lat": -7.299687,
     "status": "existing",
@@ -63,7 +63,7 @@
     "file": "gambar/Lampu 8.jpg"
   },
   {
-    "nama": "PJU Existing 9",
+    "nama": "PJU Existing 8",
     "lon": 112.6712,
     "lat": -7.299984,
     "status": "existing",
@@ -72,7 +72,7 @@
     "file": "gambar/Lampu 9.jpg"
   },
   {
-    "nama": "PJU Existing 10",
+    "nama": "PJU Existing 9",
     "lon": 112.671109,
     "lat": -7.300234,
     "status": "existing",
@@ -81,7 +81,7 @@
     "file": "gambar/Lampu 10.jpg"
   },  
   {
-    "nama": "PJU Existing 11",
+    "nama": "PJU Existing 10",
     "lon": 112.671046,
     "lat": -7.300498,
     "status": "existing",
@@ -90,7 +90,7 @@
     "file": "gambar/Lampu 11.jpg"
   },  
   {
-    "nama": "PJU Existing 12",
+    "nama": "PJU Existing 11",
     "lon": 112.671108,
     "lat": -7.300886,
     "status": "existing",
@@ -117,19 +117,62 @@
     "file": "gambar/Sorot 2.jpg"
   },   
   {
-    "nama": "PJU_Proposed_1",
-    "lon": 112.670648,
-    "lat": -7.300399,
+    "nama": "PJU Proposed 1",
+    "lon": 112.670916,
+    "lat": -7.299901,
     "status": "proposed",
     "model": "Phillips BRP110 LED120/730",
-    "file": "gambar/IMG20260722102908.jpg"
+    "file": "gambar/Lokasi 1.jpg"
   },
   {
-    "nama": "PJU_Proposed_2",
-    "lon": 112.670752,
-    "lat": -7.300083,
+    "nama": "PJU Proposed 2",
+    "lon": 112.67069,
+    "lat": -7.300002,
     "status": "proposed",
     "model": "Phillips BRP110 LED120/730",
-    "file": "gambar/IMG20260722102739.jpg"
-  }
+    "file": "gambar/Lokasi 2.jpg"
+  },
+
+  {
+    "nama": "PJU Proposed 3",
+    "lon": 112.670752,
+    "lat": -7.299955,
+    "status": "proposed",
+    "model": "Phillips BRP110 LED120/730",
+    "file": "gambar/Lokasi 3.jpg"
+  }, 
+
+  {
+    "nama": "PJU Proposed 4",
+    "lon": 112.670724,
+    "lat": -7.299997,
+    "status": "proposed",
+    "model": "Phillips BRP110 LED120/730",
+    "file": "gambar/Lokasi 4.jpg"
+  },
+  {
+    "nama": "PJU Proposed 5",
+    "lon": 112.670861,
+    "lat": -7.299901,
+    "status": "proposed",
+    "model": "Phillips BRP110 LED120/730",
+    "file": "gambar/Lokasi 5.jpg"
+  },
+
+  {
+    "nama": "PJU Proposed 6",
+    "lon": 112.670854,
+    "lat": -7.300582,
+    "status": "proposed",
+    "model": "Phillips BRP110 LED120/730",
+    "file": "gambar/Lokasi 6.jpg"
+  },
+  {
+    "nama": "PJU Proposed 7",
+    "lon": 112.670117,
+    "lat": -7.300619,
+    "status": "proposed",
+    "model": "Phillips BRP110 LED120/730",
+    "file": "gambar/Lokasi 7.jpg"
+  }  
 ]
