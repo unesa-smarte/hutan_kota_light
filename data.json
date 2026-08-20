@@ -1,6 +1,6 @@
 [
   {
-    "nama": "PJU_Existing_1",
+    "nama": "PJU Existing 1",
     "lon": 112.671906,
     "lat": -7.301268,
     "status": "existing",
@@ -9,27 +9,116 @@
     "file": "gambar/Lampu 1.jpg"
   },
   {
-    "nama": "PJU_Existing_2",
-    "lon": 112.67134,
-    "lat": -7.300322,
+    "nama": "PJU Existing 2",
+    "lon": 112.672028,
+    "lat": -7.300906,
     "status": "existing",
     "model": "IC-AIOM80",
     "kondisi": "normal",
-    "file": "gambar/IMG20260722102739.jpg"
+    "file": "gambar/Lampu 2.jpg"
   },
   {
-    "nama": "PJU_Existing_3",
-    "lon": 112.671069,
-    "lat": -7.300062,
+    "nama": "PJU Existing 3",
+    "lon": 112.671751,
+    "lat": -7.300799,
     "status": "existing",
     "model": "IC-AIOM80",
     "kondisi": "mati",
-    "file": "gambar/IMG20260722102739.jpg"
+    "file": "gambar/Lampu 3 (Shadow) .jpg"
   },
+  {
+    "nama": "PJU Existing 4",
+    "lon": 112.671532,
+    "lat": -7.300766,
+    "status": "existing",
+    "model": "IC-AIOM80",
+    "kondisi": "mati",
+    "file": "gambar/Lampu 4 (Shadow) .jpg"
+  },  
+  {
+    "nama": "PJU Existing 5",
+    "lon": 112.671495,
+    "lat": -7.300399,
+    "status": "existing",
+    "model": "IC-AIOM80",
+    "kondisi": "mati",
+    "file": "gambar/Lampu 5 (Shadow) .jpg"
+  },
+  {
+    "nama": "PJU Existing 6",
+    "lon": 112.671722,
+    "lat": -7.299967,
+    "status": "existing",
+    "model": "IC-AIOM80",
+    "kondisi": "normal",
+    "file": "gambar/Lampu 6.jpg"
+  },
+  {
+    "nama": "PJU Existing 8",
+    "lon": 112.671305,
+    "lat": -7.299687,
+    "status": "existing",
+    "model": "IC-AIOM80",
+    "kondisi": "normal",
+    "file": "gambar/Lampu 8.jpg"
+  },
+  {
+    "nama": "PJU Existing 9",
+    "lon": 112.6712,
+    "lat": -7.299984,
+    "status": "existing",
+    "model": "IC-AIOM80",
+    "kondisi": "normal",
+    "file": "gambar/Lampu 9.jpg"
+  },
+  {
+    "nama": "PJU Existing 10",
+    "lon": 112.671109,
+    "lat": -7.300234,
+    "status": "existing",
+    "model": "IC-AIOM80",
+    "kondisi": "normal",
+    "file": "gambar/Lampu 10.jpg"
+  },  
+  {
+    "nama": "PJU Existing 11",
+    "lon": 112.671046,
+    "lat": -7.300498,
+    "status": "existing",
+    "model": "IC-AIOM80",
+    "kondisi": "normal",
+    "file": "gambar/Lampu 11.jpg"
+  },  
+  {
+    "nama": "PJU Existing 12",
+    "lon": 112.671108,
+    "lat": -7.300886,
+    "status": "existing",
+    "model": "IC-AIOM80",
+    "kondisi": "normal",
+    "file": "gambar/Lampu 12.jpg"
+  },  
+  {
+    "nama": "Lampu Sorot 1",
+    "lon": 112.6705491,
+    "lat": -7.3007175,
+    "status": "existing",
+    "model": "IC-AIOM80",
+    "kondisi": "normal",
+    "file": "gambar/Sorot 1.jpg"
+  },  
+    "nama": "Lampu Sorot 2",
+    "lon": 112.670123,
+    "lat": -7.300676,
+    "status": "existing",
+    "model": "IC-AIOM80",
+    "kondisi": "normal",
+    "file": "gambar/Sorot 2.jpg"
+  },   
   {
     "nama": "PJU_Proposed_1",
     "lon": 112.670648,
-    "lat": -7.300376,
+    "lat": -7.300399,
     "status": "proposed",
     "model": "Phillips BRP110 LED120/730",
     "file": "gambar/IMG20260722102908.jpg"
