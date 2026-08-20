@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web GIS PJU Hutan Kota Unesa</title>
+    <title>Web GIS PJU - Hutan Kota Unesa Lidah Wetan</title>
     
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -52,7 +52,7 @@
         .badge-normal { background-color: #28a745; }
         .badge-mati { background-color: #dc3545; }
 
-        /* Style untuk Kotak Judul dan Legenda di Peta */
+        /* Style untuk Kotak Judul dan Legenda */
         .map-legend {
             background: rgba(255, 255, 255, 0.95);
             padding: 12px 15px;
@@ -61,7 +61,7 @@
             font-size: 13px;
             line-height: 20px;
             color: #333;
-            max-width: 220px;
+            max-width: 230px;
         }
         .map-legend h3 {
             margin: 0 0 5px 0;
@@ -85,6 +85,10 @@
             height: 28px;
             margin-right: 10px;
         }
+        .count-badge {
+            font-weight: bold;
+            color: #2c3e50;
+        }
     </style>
 </head>
 <body>
@@ -95,34 +99,34 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
     <script>
-        // 1. Inisialisasi Peta (Center ke titik lokasi PJU dan Zoom Start 19)
+        // 1. Inisialisasi Peta
         const map = L.map('map').setView([-7.3004, 112.6710], 19);
 
-        // 2. Load Layer Tile OpenStreetMap (maxZoom disesuaikan ke 20)
+        // 2. Load Layer Tile OpenStreetMap
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 20,
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 
-        // 3. Menambahkan Kotak Judul & Legenda di Sudut Kiri Bawah
+        // 3. Menambahkan Kotak Judul & Legenda (Disiapkan dengan ID Elemen untuk Count)
         const legend = L.control({ position: 'bottomleft' });
 
         legend.onAdd = function (map) {
             const div = L.DomUtil.create('div', 'map-legend');
             div.innerHTML = `
-                <h3>WEB GIS PJU - Hutan Kota Unesa</h3>
+                <h3>WEB GIS PJU - Hutan Kota Unesa Lidah Wetan</h3>
                 <h4>Legenda Marker:</h4>
                 <div class="legend-item">
                     <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png" alt="Hijau">
-                    <span>Existing (Normal)</span>
+                    <span>Existing (Normal): <span id="count-normal" class="count-badge">0</span></span>
                 </div>
                 <div class="legend-item">
                     <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png" alt="Merah">
-                    <span>Existing (Mati)</span>
+                    <span>Existing (Shadow/Mati): <span id="count-mati" class="count-badge">0</span></span>
                 </div>
                 <div class="legend-item">
                     <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png" alt="Kuning">
-                    <span>Proposed</span>
+                    <span>Proposed: <span id="count-proposed" class="count-badge">0</span></span>
                 </div>
             `;
             return div;
@@ -130,24 +134,37 @@
 
         legend.addTo(map);
 
-        // 4. Fungsi Menentukan URL Gambar Marker Pin Berdasarkan Status & Kondisi
+        // 4. Fungsi Menentukan URL Gambar Marker Pin
         function getMarkerUrl(item) {
             if (item.status === 'existing') {
                 return item.kondisi === 'mati' 
-                    ? 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png'   // Merah jika Mati
-                    : 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png'; // Hijau jika Normal
+                    ? 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png'
+                    : 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png';
             } else if (item.status === 'proposed') {
-                return 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png'; // Kuning jika Proposed
+                return 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png';
             }
             return 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-grey.png';
         }
 
-        // 5. Load File data.json
+        // 5. Load File data.json & Hitung Jumlah Marker
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
+                // Inisialisasi variabel hitung
+                let countNormal = 0;
+                let countMati = 0;
+                let countProposed = 0;
+
                 data.forEach(item => {
-                    // Buat icon tear-drop kustom sesuai dengan status/kondisi
+                    // Akumulasi Hitungan berdasarkan Kategori
+                    if (item.status === 'existing') {
+                        if (item.kondisi === 'normal') countNormal++;
+                        else if (item.kondisi === 'mati') countMati++;
+                    } else if (item.status === 'proposed') {
+                        countProposed++;
+                    }
+
+                    // Buat Icon Marker
                     const customIcon = L.icon({
                         iconUrl: getMarkerUrl(item),
                         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -157,10 +174,10 @@
                         shadowSize: [41, 41]
                     });
 
-                    // Pasang Marker di Peta
+                    // Pasang Marker ke Peta
                     const marker = L.marker([item.lat, item.lon], { icon: customIcon }).addTo(map);
 
-                    // Buat Tampilan HTML Popup
+                    // Buat Popup Content
                     let popupHTML = `
                         <div class="popup-content">
                             <img src="${item.file}" alt="${item.nama}" onerror="this.src='https://via.placeholder.com/200x220?text=Gambar+Tidak+Ada'">
@@ -169,17 +186,19 @@
                             <p><b>Status:</b> ${item.status.toUpperCase()}</p>
                     `;
 
-                    // Tampilkan Informasi Kondisi HANYA jika Status adalah Existing
                     if (item.status === 'existing') {
                         const badgeClass = item.kondisi === 'normal' ? 'badge-normal' : 'badge-mati';
                         popupHTML += `<p><b>Kondisi:</b> <span class="badge ${badgeClass}">${item.kondisi.toUpperCase()}</span></p>`;
                     }
 
                     popupHTML += `</div>`;
-
-                    // Hubungkan Popup ke Marker
                     marker.bindPopup(popupHTML);
                 });
+
+                // Perbarui Teks Jumlah di Legenda secara Dinamis
+                document.getElementById('count-normal').innerText = countNormal;
+                document.getElementById('count-mati').innerText = countMati;
+                document.getElementById('count-proposed').innerText = countProposed;
             })
             .catch(error => console.error('Gagal memuat data.json:', error));
     </script>
